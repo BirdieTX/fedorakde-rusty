@@ -16,15 +16,10 @@ USER_HOME=$(eval printf ~$SUDO_USER)
 
 cp -r etc /
 cp -r usr /
-rm /etc/yum.repos.d/_copr:copr.fedorainfracloud.org:phracek:PyCharm.repo
-rm /etc/yum.repos.d/google-chrome.repo
-rm /etc/yum.repos.d/rpmfusion-nonfree-nvidia-driver.repo
-rm /etc/yum.repos.d/rpmfusion-nonfree-steam.repo
 sudo -u "$SUDO_USER" cp -r .bashrc.d "$USER_HOME"
 sudo -u "$SUDO_USER" cp -r .config "$USER_HOME"
 sudo -u "$SUDO_USER" cp -r .local "$USER_HOME"
 sudo -u "$SUDO_USER" cp -r .scripts "$USER_HOME"
-sudo -u "$SUDO_USER" cp -r Pictures "$USER_HOME"
 plymouth-set-default-theme -R fedora-mac-style
 
 dnf5 config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
