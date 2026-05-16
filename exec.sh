@@ -30,16 +30,6 @@ dnf5 install -y \
     "https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm" \
     "https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
 cp -r yum.repos.d /etc
-dnf5 remove -y \
-    dragon \
-    kleopatra \
-    kmail \
-    kmailtransport \
-    kompare \
-    korganizer \
-    kmouth \
-    krdc \
-    neochat
 dnf5 install --allowerasing -y \
     alacritty \
     bat \
@@ -48,6 +38,7 @@ dnf5 install --allowerasing -y \
     cargo \
     cmatrix \
     default-fonts \
+    elisa-player \
     eza \
     f21-backgrounds-kde \
     f22-backgrounds-kde \
@@ -79,7 +70,6 @@ dnf5 install --allowerasing -y \
     freedoom2 \
     gamescope \
     gimp \
-    gnome-disk-utility \
     google-android-emoji-fonts \
     google-arimo-fonts \
     google-droid-fonts-all \
@@ -99,10 +89,16 @@ dnf5 install --allowerasing -y \
     inotify-tools \
     jetbrains-mono-fonts-all \
     jetbrainsmono-nerd-fonts \
+    kamoso \
     kate \
+    kcalc \
     kdenlive \
+    kmahjongg \
+    kmines \
     kmousetool \
     knights \
+    kolourpaint \
+    kpat \
     krename \
     krita \
     ksudoku \
@@ -113,18 +109,23 @@ dnf5 install --allowerasing -y \
     libdnf5-plugin-actions \
     libheif-freeworld \
     libreoffice-base \
+    libreoffice-draw \
+    libreoffice-math \
     libxcrypt-compat \
     lutris \
     material-icons-fonts \
     mc \
+    mediawriter \
     memtest86+ \
     mesa-vulkan-drivers.x86_64 \
     mozilla-openh264 \
     nerd-fonts \
     obs-studio \
+    okular \
     openrgb \
     openttd \
     pipewire-codec-aptx \
+    qrca \
     rpmfusion-free-appstream-data \
     rpmfusion-free-obsolete-packages \
     rpmfusion-nonfree-appstream-data \
@@ -132,17 +133,16 @@ dnf5 install --allowerasing -y \
     rsms-inter-fonts \
     rsms-inter-vf-fonts \
     rust \
+    skanpage \
     steam \
     snapper \
     terminus-fonts \
     terminus-fonts-console \
     vim \
-    vlc \
     vlc-plugins-all \
-    vlc-plugins-freeworld 
+    vlc-plugins-freeworld
 dnf5 autoremove -y
 dnf5 upgrade --allowerasing --allow-downgrade --skip-unavailable --refresh -y
-dnf5 autoremove -y
 systemctl disable NetworkManager-wait-online.service
 dracut --regenerate-all -f -v
 fastfetch
