@@ -1,5 +1,5 @@
 [terra-mesa]
-name=Terra (Mesa)
+name=Fyra Labs Terra (Mesa)
 #baseurl=https://repos.fyralabs.com/terra$releasever-mesa
 metalink=https://tetsudou.fyralabs.com/metalink?repo=terra$releasever-mesa&arch=$basearch
 metadata_expire=6h
@@ -13,7 +13,7 @@ countme=1
 priority=80
 
 [terra-mesa-source]
-name=Terra (Mesa - Source)
+name=Fyra Labs Terra (Mesa - Source)
 #baseurl=https://repos.fyralabs.com/terra$releasever-mesa-source
 metalink=https://tetsudou.fyralabs.com/metalink?repo=terra$releasever-mesa-source&arch=$basearch
 metadata_expire=6h
